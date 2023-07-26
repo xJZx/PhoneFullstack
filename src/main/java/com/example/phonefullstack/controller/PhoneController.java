@@ -13,6 +13,12 @@ public class PhoneController {
     @Autowired
     private PhoneService phoneService;
 
+    @PostMapping("/order")
+    public String order(@ModelAttribute Phone phone){
+
+        return "index";
+    }
+
     @PostMapping("/add")
     public String add(@RequestBody Phone phone){
         phoneService.savePhone(phone);

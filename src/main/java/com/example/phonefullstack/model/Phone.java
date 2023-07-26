@@ -10,7 +10,7 @@ public class Phone {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
+    private String color;
     private String processor;
     private String camera;
     private String battery;
@@ -26,12 +26,12 @@ public class Phone {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getColor() {
+        return color;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getProcessor() {
@@ -56,5 +56,16 @@ public class Phone {
 
     public void setBattery(String battery) {
         this.battery = battery;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "id=" + id +
+                ", color='" + color + '\'' +
+                ", processor='" + processor + '\'' +
+                ", camera='" + camera + '\'' +
+                ", battery='" + battery + '\'' +
+                '}';
     }
 }

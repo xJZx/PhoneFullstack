@@ -10,8 +10,8 @@ import java.util.List;
 @Service
 public class PhoneServiceImplementation implements PhoneService{
 
-   @Autowired
-   private PhoneRepository phoneRepository;
+    @Autowired
+    private PhoneRepository phoneRepository;
 
     @Override
     public Phone savePhone(Phone phone) {
