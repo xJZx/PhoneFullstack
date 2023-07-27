@@ -253,13 +253,16 @@
 } */
 
 
-.order{
+.order-column{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*display: grid;*/
+    /*grid-template-rows: auto auto;*/
+    /*align-items: center;*/
 }
 
-.order button{
+.order-column button{
     padding: 5px 30px;
     border: none;
     outline: none;
@@ -273,18 +276,18 @@
     transition: 0.2s ease;
 }
 
-.order button:hover{
+.order-column button:hover{
     transform: scale(1.08);
 }
 
-.order label{
+.order-column label{
     margin: 10px;
     padding: 5px;
     text-align: center;
     font-size: 25px;
 }
 
-.order select{
+.order-column select{
     margin: 10px;
     background-color: transparent;
 }
