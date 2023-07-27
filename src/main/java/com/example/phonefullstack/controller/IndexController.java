@@ -3,21 +3,33 @@ package com.example.phonefullstack.controller;
 import com.example.phonefullstack.model.Phone;
 import com.example.phonefullstack.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/phone")
-public class PhoneController {
+@Controller
+public class IndexController {
     @Autowired
     private PhoneService phoneService;
 
-    @PostMapping("/order")
-    public String order(@ModelAttribute Phone phone){
+    @GetMapping("/")
+    public String index(){
 
         return "index";
     }
+
+    @RequestMapping("/cart")
+    public String cart(){
+
+        return "cart";
+    }
+
+//    @PostMapping("/order")
+//    public String order(@ModelAttribute Phone phone){
+//        System.out.println(phone.toString());
+//        return "index";
+//    }
 
     @PostMapping("/add")
     public String add(@RequestBody Phone phone){

@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Phone Website</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script defer src="../static/js/script.js"></script>
+</head>
+<body>
+    <div class="main1">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img th:src="@{/images/logo.png}"></a>
+            </div>
+
+            <ul class="nav-links">
+                <div class="menu">
+                    <!-- Odnosniki na stronie -->
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{phone}">Phone</a></li>
+                    <li><a th:href="@{accessories}">Accessories</a></li>
+                    <li><a th:href="@{cart}">Cart</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img th:src="@{/images/mobile.png}" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img th:src="@{/images/camera.png}">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img th:src="@{/images/processor.png}">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img th:src="@{/images/display.png}">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img th:src="@{/images/battery.png}">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000mAh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img th:src="@{/images/arrow.png}" id="upButton">
+            <h3>Features</h3>
+            <img th:src="@{/images/arrow.png}" id="downButton">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upButton = document.getElementById("upButton");
+        var downButton = document.getElementById("downButton");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upButton.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+
+        downButton.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+    </script>
+
+</body>
+</html>
