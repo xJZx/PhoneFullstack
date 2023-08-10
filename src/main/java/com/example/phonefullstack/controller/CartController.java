@@ -33,6 +33,6 @@ public class CartController {
 //        savePhone() - saving to DB
         phoneService.savePhone(phone);
         System.out.println(phone.toString());
-        return "index";
+        return "order";
     }
 }
