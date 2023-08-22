@@ -21,6 +21,14 @@
     background: linear-gradient(to right, #f5c238, #c30ee7);
 }
 
+.main3{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #f5c238, #c30ee7);
+}
+
 .navbar{
     display: flex;
     align-items: center;

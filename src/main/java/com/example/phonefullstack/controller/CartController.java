@@ -29,10 +29,12 @@ public class CartController {
     }
 
     @PostMapping("/order")
-    public String order(@ModelAttribute Phone phone){
+    public String order(@ModelAttribute Phone phone, Model model){
 //        savePhone() - saving to DB
         phoneService.savePhone(phone);
         System.out.println(phone.toString());
+        // na przekazanie do html atrybutu klasy
+        model.addAttribute("id", phone.getId());
         return "order";
     }
 }
