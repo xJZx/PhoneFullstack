@@ -22,19 +22,17 @@ public class CartController {
         return "cart";
     }
 
-    @RequestMapping("/index")
-    public String index(){
-
-        return "index";
-    }
-
     @PostMapping("/order")
     public String order(@ModelAttribute Phone phone, Model model){
 //        savePhone() - saving to DB
         phoneService.savePhone(phone);
         System.out.println(phone.toString());
         // na przekazanie do html atrybutu klasy
-        model.addAttribute("id", phone.getId());
+        model.addAttribute("id", phone.getPhone_id());
+        model.addAttribute("color", phone.getColor());
+        model.addAttribute("processor", phone.getProcessor());
+        model.addAttribute("camera", phone.getCamera());
+        model.addAttribute("battery", phone.getBattery());
         return "order";
     }
 }

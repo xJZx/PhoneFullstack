@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Order Page</title>
+    <title>User Page</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <script defer src="../static/js/script.js"></script>
 </head>
@@ -23,16 +23,25 @@
             </ul>
         </nav>
 
-        <section class="orders">
-            <h1>That is your order number: </h1>
-            <h2 th:text="${id}">id</h2>
-            <h1>This is your order set-up: </h1>
-            <h2 th:text="${color}">color</h2>
-            <h2 th:text="${processor}">processor</h2>
-            <h2 th:text="${camera}">camera</h2>
-            <h2 th:text="${battery}">battery</h2>
+        <section class="user">
+            <div class="register">
+                <form th:action="@{/register}" th:object="${user}" method="post" class="register-column">
+                    <label>First name: </label>
+                    <input type="text" name="firstname">
+
+                    <label>Last name: </label>
+                    <input type="text" name="lastname">
+
+                    <label>E-mail: </label>
+                    <input type="text" name="email">
+
+                    <label>Password: </label>
+                    <input type="text" name="password">
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
         </section>
     </div>
-
 </body>
 </html>

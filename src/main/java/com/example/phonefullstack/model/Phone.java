@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class Phone {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int phone_id;
     private String color;
     private String processor;
     private String camera;
@@ -18,12 +18,12 @@ public class Phone {
     public Phone() {
     }
 
-    public int getId() {
-        return id;
+    public int getPhone_id() {
+        return phone_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPhone_id(int id) {
+        this.phone_id = id;
     }
 
     public String getColor() {
@@ -61,7 +61,7 @@ public class Phone {
     @Override
     public String toString() {
         return "Phone{" +
-                "id=" + id +
+                "id=" + phone_id +
                 ", color='" + color + '\'' +
                 ", processor='" + processor + '\'' +
                 ", camera='" + camera + '\'' +

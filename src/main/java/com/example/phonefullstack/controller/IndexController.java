@@ -25,6 +25,12 @@ public class IndexController {
         return "cart";
     }
 
+    @RequestMapping("/user")
+    public String user(){
+
+        return "user";
+    }
+
 //    @PostMapping("/order")
 //    public String order(@ModelAttribute Phone phone){
 //        System.out.println(phone.toString());
