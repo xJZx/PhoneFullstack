@@ -1,4 +1,4 @@
-const navLinkEls = document.querySelectorAll('.nav-links ul li a');
+const navLinkEls = document.querySelectorAll('.menu li a');
 const windowPathname = window.location.pathname;
 
 navLinkEls.forEach(navLinkEl => {
@@ -8,3 +8,5 @@ navLinkEls.forEach(navLinkEl => {
         navLinkEl.classList.add('active');
     }
 });
+
+document.getElementById()

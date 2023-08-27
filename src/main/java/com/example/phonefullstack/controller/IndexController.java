@@ -25,10 +25,10 @@ public class IndexController {
         return "cart";
     }
 
-    @RequestMapping("/user")
+    @RequestMapping("/login")
     public String user(){
 
-        return "user";
+        return "login";
     }
 
 //    @PostMapping("/order")

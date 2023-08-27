@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script defer src="../static/js/script.js"></script>
+</head>
+<body>
+    <div class="profile">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img th:src="@{/images/logo.png}"></a>
+            </div>
+
+            <ul class="nav-links">
+                <div class="menu">
+                    <!-- Odnosniki na stronie -->
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{phone}">Phone</a></li>
+                    <li><a th:href="@{accessories}">Accessories</a></li>
+                    <li><a th:href="@{cart}">Cart</a></li>
+                    <li><a th:href="@{login}">Log in</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <p>Siema tu profil</p>
+
+    </div>
+</body>
+</html>

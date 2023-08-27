@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script defer src="../static/js/script.js"></script>
+</head>
+<body>
+    <div class="login">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img th:src="@{/images/logo.png}"></a>
+            </div>
+
+            <ul class="nav-links">
+                <div class="menu">
+                    <!-- Odnosniki na stronie -->
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{phone}">Phone</a></li>
+                    <li><a th:href="@{accessories}">Accessories</a></li>
+                    <li><a th:href="@{cart}">Cart</a></li>
+                    <li><a th:href="@{login}">Log in</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <section class="user">
+            <div class="login">
+                <form th:action="@{/login}" th:object="${user}" method="post" class="login-column">
+
+                    <label>E-mail: </label>
+                    <input type="text" name="email">
+
+                    <label>Password: </label>
+                    <input type="text" name="password">
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
