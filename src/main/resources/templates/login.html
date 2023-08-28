@@ -24,7 +24,7 @@
         </nav>
 
         <section class="user">
-            <div class="login">
+            <div class="login-form">
                 <form th:action="@{/login}" th:object="${user}" method="post" class="login-column">
 
                     <label>E-mail: </label>
@@ -37,6 +37,12 @@
                 </form>
             </div>
         </section>
+
+        <ul>
+            <div class="register-link">
+                <li><a th:href="@{registration}">Register</a></li>
+            </div>
+        </ul>
 
     </div>
 </body>
