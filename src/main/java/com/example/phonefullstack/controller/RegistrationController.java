@@ -27,7 +27,7 @@ public class RegistrationController {
     @PostMapping("/register")
     public String register(@ModelAttribute User user, Model model){
 //        checking if the user already exist in the DB
-        if (userRepository.findById(user.getUser_id()).isPresent()){
+        if (userRepository.findByEmail(user.getEmail()) != null){
             return "registration";
         }
 //        saveUser() - saving to DB
