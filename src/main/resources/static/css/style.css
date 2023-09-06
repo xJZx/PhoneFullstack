@@ -108,8 +108,11 @@
     list-style: none;
 }
 
-.active{
+/* java script uses it to highlight currently selected navlink */
+.menu li a.active{
     color: #000000;
+    text-decoration: none;
+    list-style: none;
 }
 
 .information{
